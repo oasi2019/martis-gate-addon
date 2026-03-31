@@ -9,7 +9,9 @@ RUN apk add --no-cache \
 WORKDIR /app
 
 COPY requirements.txt /app/requirements.txt
-RUN pip3 install --no-cache-dir -r /app/requirements.txt
+
+RUN python3 -m venv /opt/venv
+RUN /opt/venv/bin/pip install --no-cache-dir -r /app/requirements.txt
 
 COPY app.py /app/app.py
 COPY run.sh /run.sh
