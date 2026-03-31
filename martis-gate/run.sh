@@ -1,3 +1,3 @@
 #!/usr/bin/with-contenv bashio
 
-python3 /app/app.py
+/opt/venv/bin/python /app/app.py
